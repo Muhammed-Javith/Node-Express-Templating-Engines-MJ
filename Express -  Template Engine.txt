@@ -1,0 +1,44 @@
+template engine:
+in html to change the values dynamically we use template engine.
+3 types:
+1.pug (formarly known as Jade)
+2.EJS
+3.HandleBars
+
+1.pug template engine:
+	- search pug template engine in google
+	- go to pug.js(official site)
+	- npm install pug (to install pug)
+ - in app.js 
+	- app.set('view.engine', 'pug')
+	    app.set() - settings for we using
+	    view.engine - used to mention the engine we going to use
+	- in pug, there is no need clossing tags.
+- if you have multiple class is div tag then you need to use "."
+  ex: 
+	div(class = "container px-4")
+  above code in pug  we write following
+	div.container.px-4
+ - main.pug
+	- contains common things
+ - index.oug
+	- extends main.pug
+2.EJS template engine:
+   - EJS - embedded javascript templating
+	- <%= EJS %>  (to show value)
+	-reasons:
+	  use plain JS
+	  simple syntax
+	-  go to ejs.com
+	- npm install ejs
+	- how to use?
+		app.set('view Engine','ejs')
+3.Handlebars
+	- npm install express -handlebars
+	use this const { engine } = require ('express-handlebars')  //import
+   app.engine('hbs',engine({extname:'.hbs',defaultLayout:'main'}))
+   app.set('view engine', 'hbs')
+
+pug,ejs are have adv and disadv also.
+but Handlebars are best to use.
+ 
